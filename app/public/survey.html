@@ -10,8 +10,11 @@
 <body>
     <div class="container">
         <h1>Survey Questions</h1>
+        <p> Answer the following questions qucikly, selecting an answer between 1(Strongly Disagree) and 5 (Strongly Agree).</p>
         <hr class="my-4">
         <form>
+
+            <!--Profile Questions-->
             <h2>About You</h2>
             <br>
             <div class="form-group">
@@ -31,14 +34,224 @@
             </div>
             <hr class="my-4">
 
+            <!--Questionnaire Questions-->
+            <h3><strong>Question 1</strong></h3>
+            <h5>Playing  a game is fun only when you win.</h5>
+            <select class="chosen-select" id="q1">
+              <option value=""></option>
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+            <br>
+            <br>
+
+            <h3><strong>Question 2</strong></h3>
+            <h5>When people succeed, it's because of hard work. Luck has nothing to do with success </h5>
+            <select class="chosen-select" id="q2">
+              <option value=""></option>
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+            <br>
+            <br>
+
+            <h3><strong>Question 3</strong></h3>
+            <h5>Summer is the best season of the year.</h4>
+            <select class="chosen-select" id="q3">
+              <option value=""></option>
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+            <br>
+            <br>
+
+            <h3><strong>Question 4</strong></h3>
+            <h5>It doesn't matter whether you enjoy your job or not as long as it's a well-paid job.</h5>
+            <select class="chosen-select" id="q4">
+              <option value=""></option>
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+            <br>
+            <br>
+
+            <h3><strong>Question 5</strong></h3>
+            <h5>Pizza is the best food in the world</h5>
+            <select class="chosen-select" id="q5">
+              <option value=""></option>
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+            <br>
+            <br>
+
+            <h3><strong>Question 6</strong></h3>
+            <h5>Cinnamon smells good.</h5>
+            <select class="chosen-select" id="q6">
+              <option value=""></option>
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+            <br>
+            <br>
+
+            <h3><strong>Question 7</strong></h3>
+            <h5>Snow is better than sand.</h5>
+            <select class="chosen-select" id="q7">
+              <option value=""></option>
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+            <br>
+            <br>
+
+            <h3><strong>Question 8</strong></h3>
+            <h5>Letters are better than e-mail.</h4>
+            <select class="chosen-select" id="q8">
+              <option value=""></option>
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+            <br>
+            <br>
+
+            <h3><strong>Question 9</strong></h3>
+            <h5>It's better for children to grow up in the countryside than in a big city.</h5>
+            <select class="chosen-select" id="q9">
+              <option value=""></option>
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+            <br>
+            <br>
+
+            <h3><strong>Question 10</strong></h3>
+            <h5>Decisions that people make quickly are always wrong.</h5>
+            <select class="chosen-select" id="q10">
+              <option value=""></option>
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+            <br>
+            <br>
+
+            <hr class="my-4">
+
+            <!--Submit Button-->
+
+            <button type="submit" class="btn btn-info btn-lg btn-block" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>Submit</button>
+
+            <br>
+            <br>
 
         </form>
-
     </div>
 
+    <!--Friend Match Modal-->
+    <div id="match-modal" class="modal fade" role="dialog">
+        <div lcass="model dialog">
 
+            <div class="model content">
+                <div class="modal-header">
+                    <button type="button" class="modal close" data-dismiss="modal">&times;</button>
+                    <h2 class="modal-title"><strong>Friend Match</strong></h2>
+                </div>
+                <div class="modal-body">
+                    <h2 id="friend-name"></h2>
+                    <img id="match-img" src="" alt=" ">
+                </div>
+                <div clss="modal-footer">
+                    <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
+<script type="text/javascript">
+    $("#submit").on("click", function(event) {
+        event.preventDefault();
 
+        //Function to validate form input
+        var valid = true;
+
+        if($("name").val() === " " || $("#photo").val() === " ") {
+            valid = false;
+        }
+        else if ($(this).val() === " ") {
+            valid = false;
+        }
+        else if (valid === true){
+            var newUser = {
+                name: $("#nameInput").val().trim(),
+                photo: $("profilePhoto").val().trim(),
+                answers: [
+                            $("#q1").val(),
+                            $("q2").val(),
+                            $("q3").val(),
+                            $("q4").val(),
+                            $("q5").val(),
+                            $("q6").val(),
+                            $("q7").val(),
+                            $("q8").val(),
+                            $("q9").val(),
+                            $("q10").val()
+                ]
+            };
+
+            var currentURL = window.location.origin;
+
+            //Ajax call for receiving response after POST req
+            $.post(currentURL+ "/api/friends", newUser, function(data) {
+                $("#friendMatch").text(data.name);
+                $("#friendMatchPhoto").attr("src", data.photo);
+                $("#friendMatchModal").modal("toogle");
+            });
+        }else {
+            //If a required field is missing, show alert
+            alert("Survey is Incomplete!");
+        }
+    });
+</script>
 
 
 </body>
