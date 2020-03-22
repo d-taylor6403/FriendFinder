@@ -185,20 +185,21 @@
             <br>
 
         </form>
-    </div>
+      </div>
+  
 
     <!--Friend Match Modal-->
     <div id="match-modal" class="modal fade" role="dialog">
-        <div lcass="model dialog">
+        <div class="modal dialog">
 
-            <div class="model content">
+            <div class="modal content">
                 <div class="modal-header">
                     <button type="button" class="modal close" data-dismiss="modal">&times;</button>
                     <h2 class="modal-title"><strong>Friend Match</strong></h2>
                 </div>
                 <div class="modal-body">
                     <h2 id="friend-name"></h2>
-                    <img id="match-img" src="" alt=" ">
+                    <img id="match-img" src="" alt="Image Not Found">
                 </div>
                 <div clss="modal-footer">
                     <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
@@ -207,6 +208,13 @@
         </div>
     </div>
 
+<!--Link in JQuery-->
+<script src="https://code.jquery.com/jquery.js"></script>
+
+<!--Javascript used for MODAL-->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<!--Submission Logic-->
 <script type="text/javascript">
     $("#submit").on("click", function(event) {
         event.preventDefault();
@@ -224,7 +232,7 @@
             var newUser = {
                 name: $("#nameInput").val().trim(),
                 photo: $("profilePhoto").val().trim(),
-                answers: [
+                scores: [
                             $("#q1").val(),
                             $("q2").val(),
                             $("q3").val(),
@@ -241,10 +249,10 @@
             var currentURL = window.location.origin;
 
             //Ajax call for receiving response after POST req
-            $.post(currentURL+ "/api/friends", newUser, function(data) {
+            $.post(currentURL + "/api/friends", newFriend, function(data) {
                 $("#friendMatch").text(data.name);
                 $("#friendMatchPhoto").attr("src", data.photo);
-                $("#friendMatchModal").modal("toogle");
+                $("#friendMatchModal").modal("toggle");
             });
         }else {
             //If a required field is missing, show alert

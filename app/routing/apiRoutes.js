@@ -54,7 +54,7 @@ function apiRoutes(app) {
 var bestFriendMatch = friendsData[bestMatchPosition];
 
 //reply with a JSON object of the best match
-res.json(bestMatchPosition);
+res.json(bestFriendMatch);
 
 //Push the new friend to the friends data array for storage
 friendsData.psuh(newFriend);
