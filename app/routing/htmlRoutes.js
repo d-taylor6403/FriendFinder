@@ -1,3 +1,4 @@
+console.log("HTML Route Connected Successfully")
 
 //Require path to parse directory structures
 var path = require("path");
