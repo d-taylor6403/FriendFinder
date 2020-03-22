@@ -25,11 +25,11 @@
             <label for="profile">Photo (Required)</label>
             <div class="input-group mb-3">
                 <div class="custom-file">
-                  <input type="file" class="custom-file-input" id="profilePhoto">
-                  <label class="custom-file-label" for="profilePhoto" aria-describedby="profilePhoto">Choose file</label>
+                  <input type="file" class="custom-file-input" id="profilePhoto" aria-describedby="profilePhotoAddon">
+                  <label class="custom-file-label" for="profilePhoto">Choose file</label>
                 </div>
                 <div class="input-group-append">
-                  <span class="input-group-text" id="inputGroupFileAddon02">Upload</span>
+                  <button class="btn btn-outline-info" type="button" id="profilePhotoAddon"></button>
                 </div>
             </div>
             <hr class="my-4">
@@ -216,6 +216,10 @@
 
 <!--Submission Logic-->
 <script type="text/javascript">
+
+$(document).ready(function() {
+  bsCustomFileInput.init()
+
     $("#submit").on("click", function(event) {
         event.preventDefault();
 
@@ -259,6 +263,7 @@
             alert("Survey is Incomplete!");
         }
     });
+  });
 </script>
 
 

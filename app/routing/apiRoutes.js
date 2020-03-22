@@ -6,7 +6,7 @@ function apiRoutes(app) {
 
     //A GET route to /api/friends that will be used to display JSON friends data
     app.get("/api/friends", function (req, res) {
-        res.json(freinds);
+        res.json(friendsData);
     });
 
     //handle the post request from the survey form
