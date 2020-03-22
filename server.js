@@ -5,16 +5,16 @@ var path = require("path");
 
 //Set up Express App
 var app = express();
-var PORT = process.env.PORT;
+var PORT = process.env.PORT || 3000;
 
 //express middleware for static files
 app.use(express.static("app/public"));
 
 //Sets up the Express app to handle data parsing and formatting
 app.use(bodyParser.json());
-app.use(bodyParse.urlencoded({ extended: true}));
+app.use(bodyParser.urlencoded({ extended: true}));
 app.use(bodyParser.text({type: "text/html"}));
-app.use(bodyParse.json({ type: "application/vnd.api+json"}));
+app.use(bodyParser.json({ type: "application/vnd.api+json"}));
 
 //Routes
 require("./app/routing/apiRoutes.js")(app);
