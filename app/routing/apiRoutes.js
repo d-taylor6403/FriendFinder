@@ -1,3 +1,4 @@
+console.log("API Route Connected Successfully");
 //link in Friends Data
 var friendsData = require("../data/friends.js");
 
@@ -11,6 +12,7 @@ function apiRoutes(app) {
 
     //handle the post request from the survey form
     app.post("/api/friends", function (req, res) {
+        console.log(req.body.scores);
         
         //Parse new friend input to get integers 
         var newFriend = {
@@ -20,18 +22,21 @@ function apiRoutes(app) {
         };
 
         var scoresArray = [];
+
         for(var i=0; i < req.body.scores.length; i++) {
-            scoresArray.push(parseInt(req.body.scores[i]));
+            scoresArray.push(parseInt(req.body.scores[i]))
         }
         newFriend.scores = scoresArray;
+        console.log(scoresArray)
+        
 
         //Cross-check the new friend entry with the existing friends
         var scoreCompareArray = [];
-        for(var i =0; i < friendsData.length; i++) {
+        for(var i=0; i < friendsData.length; i++) {
 
             //check each friend's scores and sum difference in points
             var currentComparison = 0;
-            for(var j=0; j < newFriend.scores.length; j++) {
+            for(var j=0; j < friendsData[i].scores.length; j++) {
                 currentComparison += Math.abs(newFriend.scores[j] - friendsData[i].scores[j]);
             }
 
@@ -57,7 +62,7 @@ var bestFriendMatch = friendsData[bestMatchPosition];
 res.json(bestFriendMatch);
 
 //Push the new friend to the friends data array for storage
-friendsData.psuh(newFriend);
+friendsData.push(newFriend);
 
     
 });
