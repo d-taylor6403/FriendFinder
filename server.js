@@ -9,7 +9,7 @@ var htmlRoutes = require("./app/routing/htmlRoutes");
 
 //Set up Express App
 var app = express();
-var PORT = process.env.PORT || 8080;
+var PORT = process.env.PORT || 3000;
 
 //express middleware for static files
 app.use(express.static("app/public"));
